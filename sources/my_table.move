@@ -1,6 +1,8 @@
 module borrowed_example::my_table {
-    use std::signer;
     use aptos_std::iterable_table::{Self, IterableTable};
+
+    #[test_only]
+    use std::signer;
 
     struct MyTable has key {
         it: IterableTable<u64, u64>
